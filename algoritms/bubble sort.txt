@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+#include <cctype>
+#include<bits/stdc++.h>
+#include<array>
+void swapp(int&x,int&y)
+{
+    int temp=x;
+    x=y;
+    y=temp;
+}
+
+
+using namespace std;
+
+int main()
+{
+    int arr[]={1,5,7,6,3,4,8,2,9};
+    int n= sizeof(arr)/sizeof(arr[0]);
+   for(int i=0;i<n;++i)
+   {
+          for(int j=0;j<n-1;++j)
+          {
+              if(arr[j]>arr[j+1])
+                swapp(arr[j],arr[j+1]);
+          }
+
+   }
+      for(int i=0;i<n;++i)
+        {
+            cout<<arr[i];
+        }
+    return 0;
+}
+
+
+
